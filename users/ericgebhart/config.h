@@ -83,7 +83,7 @@
 
 // Choose a mod layer. Can be changed per layer.
 // TRNS, ALT, HRS_NAV HRM_GACS, HRM_SCAG, HRM_GASC, MIRYOKU_HRM_GASC
-#define MODS_ARE HRS_NAV
+#define MODS_ARE TRNS
 #define DEFAULT_MODS MODS_ARE
 
 // Choose a thumb cluster.
@@ -105,6 +105,7 @@
 #define HANDS_DOWN_LTR_THUMBS_ARE TH_LTR
 #define MALTRON_LTR_THUMBS_ARE TH_LTR
 #define RSTHD_LTR_THUMBS_ARE TH_LTR
+#define APTMAK_LTR_THUMBS_ARE TH_LTR
 
 // layout io, matrix size.
 // a reasonable default for most keyboards.
@@ -112,7 +113,7 @@
 #define BASE_COLS_IN_OUT 5_6 // 5, 5_6, 6
 
 // OLED STUFF.
-#define OLED_CUSTOM_ENABLE // custom oled here.
+//#define OLED_CUSTOM_ENABLE // custom oled here.
 //#define OLED_LOGO_ENABLE // turn on/off the logo.
 #define KEYLOGGER_ENABLE // 1500 bytes, track and print keypress info to oled.
 //#define SPLIT_LAYER_STATE_ENABLE  // to sync state between sides.
@@ -174,12 +175,22 @@
 //#define MINIMAK_LAYER_ENABLE
 //#define MINIMAK_8_LAYER_ENABLE
 //#define MINIMAK_12_LAYER_ENABLE
+//#define SEMIMAK_JQ_LAYER_ENABLE
+//#define SEMIMAK_LAYER_ENABLE
+//#define APTMAK_LAYER_ENABLE
+//#define APTMAK_30_LAYER_ENABLE
+//#define APTMAK_ALT_LAYER_ENABLE
 
 // BEAKL
-// #define BEAKL15_LAYER_ENABLE
+//#define BEAKL15_LAYER_ENABLE
 //#define BEAKL19_LAYER_ENABLE
 //#define BEAKL27_LAYER_ENABLE
+//#define BEAKL27a_LAYER_ENABLE // punctuation on top.
 //#define BEAKLWI_LAYER_ENABLE
+// no alpha on thumb.
+//#define BEAKLWIa_LAYER_ENABLE
+// punctuation on top.
+//#define BEAKLWIb_LAYER_ENABLE
 
 // carpalx layouts
 //#define CARPALX_QFMLWY_LAYER_ENABLE
@@ -191,7 +202,6 @@
 //#define EUCALYN_LAYER_ENABLE
 //#define HANDS_UP_LAYER_ENABLE
 //#define RSTHD_LAYER_ENABLE
-//#define HANDS_UP_LAYER_ENABLE
 //#define WHITE_LAYER_ENABLE
 //#define ISRT_LAYER_ENABLE
 //#define SOUL_LAYER_ENABLE
@@ -201,13 +211,14 @@
 //#define WHORF6_LAYER_ENABLE
 
 // mtgap and relatives
-//#define MTGAP_LAYER_ENABLE
+// #define MTGAP_LAYER_ENABLE
 //#define CTGAP_LAYER_ENABLE
 //#define APT_LAYER_ENABLE
 //#define CANARY_LAYER_ENABLE
 
 // Hands down
-#define HD_NEU_NARROW_LAYER_ENABLE
+//#define HD_NEU_NARROW_LAYER_ENABLE
+#define HD_NEU_NARROW_M_LAYER_ENABLE
 //#define HD_REF_LAYER_ENABLE
 //#define HD_DASH_LAYER_ENABLE
 //#define HD_ELAN_LAYER_ENABLE
@@ -216,6 +227,9 @@
 //#define HD_PLATINUM_LAYER_ENABLE
 //#define HD_GOLD_LAYER_ENABLE
 //#define HD_TITANIUM_LAYER_ENABLE
+//#define HD_RHODIUM_LAYER_ENABLE
+//#define HD_RHODIUMB_LAYER_ENABLE
+//#define HD_VROOMY_LAYER_ENABLE
 
 // A compact optimot for 3x10.
 // requires accent characters.
@@ -305,19 +319,23 @@
 //#define SYMBOL_BEAKL         // original - the default if nothing else.
 //#define SYMBOL_BEAKL_EXT     // extended for non beakl base layers.
 //#define SYMBOL_BEAKL_EXT_VI  // extended with vi keybinding in mind.
-#define SYMBOL_BEAKL_C         // more alterations by frequency
-// #define SYMBOL_NEO             // The symbol layer from the Neo layout.
+//#define SYMBOL_BEAKL_C        // more alterations by frequency
+#define SYMBOL_D               // combos for closing )]}
+// #define SYMBOL_NEO          // The symbol layer from the Neo layout.
 // #define SYMBOL_MIRYOKU      // minimalist symbols after miryoku
 //#define SYMBOL_BEAKL_WI      // original wi
 
 
 /* toprows. */
-// The default, if not defined, is a standard qwerty set of rows.
+// The default, if not defined, is RAISE, a standard qwerty set of rows.
 // symbols, numbers, function keys. Numbers on the home row.
 
-// #define TOPROWS_BKL_15_NUMS  // center row with Beakl15 order. 40123 76598.
-// #define TOPROWS_BKL_19_NUMS // Beakl 19 order: 32104  76598
+// top rows are all standard qwerty symbol row.
+// bottom rows are either F-keys or lock and one shot mods.
+// #define TOPROWS_BKL_15  // center row with Beakl15 order. 40123 76598.
+// #define TOPROWS_BKL_19 // Beakl 19 order: 32104  76598
+// #define TOPROWS_JOHNM_MOD //  84236 71059
+// #define TOPROWS_JOHNM2_MOD //  85236 71049
 #define TOPROWS_MOD  // beakl 15 nums, oneshot and smart lock mods. no Fkeys.
-
 
 #endif

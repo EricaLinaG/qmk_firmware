@@ -184,11 +184,11 @@
 /*     ___2___,                                    \ */
 /*     ___6___ */
 
-#define ___12_DOX_ALL_THUMBS___ ___12___
-
-/* ___THUMBS_1___,                             \ */
-/* ___xTHUMBS_2___,                            \ */
-/* ___6_ERGO_THUMBS___ */
+//#define ___12_DOX_ALL_THUMBS___ ___12___
+#define ___12_DOX_ALL_THUMBS___ \
+  ___THUMBS_1___,                            \
+   ___THUMBS_2___,                           \
+   ___6_ERGO_THUMBS___
 
 #define ___12_DOX_ALL_THUMBS_EN___ ___12_DOX_ALL_THUMBS___
 #define ___12_DOX_ALL_THUMBS_BP___ ___12_DOX_ALL_THUMBS___

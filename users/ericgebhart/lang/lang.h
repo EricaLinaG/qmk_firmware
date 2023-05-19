@@ -55,6 +55,12 @@
 #define OBSTRUCT(...) __VA_ARGS__ DEFER(EMPTY)()
 #define EXPAND(...) __VA_ARGS__
 
+#define BP_NO KC_NO
+#define US_NO KC_NO
+
+#define CB_NO KC_NO
+#define CB2_NO KC_NO
+
 // Give the right keycode prefix by LANG_IS
 #define LANG_PFX CAT(LANG_IS, KC)
 #define COMBOKC CB

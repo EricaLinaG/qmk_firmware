@@ -34,24 +34,14 @@ VPATH += $(USER_PATH)/lang
 VPATH += $(USER_PATH)/layers
 VPATH += $(USER_PATH)/mod_layers
 VPATH += $(USER_PATH)/oled
-
-# MCU=STM32F411
-# BOARD=QMK_PROTON_C
-# SOFT_SERIAL_PIN=D2
-# # Bootloader selection
-# BOOTLOADER = stm32-dfu
-
-# WS2812_DRIVER = pwm
-# SERIAL_DRIVER = usart
-# AUDIO_ENABLE = no
-# LTO_ENABLE = no
-# CONVERT_TO=proton_c
+## For the combo macros in keymap_combos.h
+VPATH += keyboards/gboards/g
 
 # so the keyboard's code doesn't add stuff we don't need.
 # when we use our own oled renders.
 # oled_custom_enable should also be set in config.h.
-OLED_ENABLE = yes
-OLED_CUSTOM_ENABLE = yes
+OLED_ENABLE = no
+OLED_CUSTOM_ENABLE = no
 
 ifeq ($(strip $(OLED_CUSTOM_ENABLE)), yes)
         SRC += $(USER_PATH)/oled/oled_stuff.c
@@ -81,6 +71,7 @@ MAGIC_ENABLE = no
 COMBO_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 
+AUDIO_ENABLE = no
 ENCODER_ENABLE = no
 RGBLIGHT_ENABLE = no
 BACKLIGHT_ENABLE = no
